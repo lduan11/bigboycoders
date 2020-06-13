@@ -8,7 +8,6 @@ import GoogleMapReact from "google-map-react";
 import Radar from "radar-sdk-js";
 import { Provider } from "react-redux";
 import { store } from "./chat";
-import "milligram";
 import App from "./App";
 
 function BotButton() {
@@ -97,7 +96,6 @@ function Map() {
 
   return (
     <React.Fragment>
-      s
       <div style={{ height: "50vh", width: "50%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyCYVBKK_e3qDxr5RJBALvR9B68AGjOsMYE" }}
