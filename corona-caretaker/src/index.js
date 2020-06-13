@@ -21,7 +21,7 @@ function BotButton() {
 function DialogFlowIntegration() {
   return (
     <React.Fragment>
-      <df-messenger
+      <df-messenger class="messenger-box"
         intent="WELCOME"
         chat-title="MLH-Hackathon2"
         agent-id="6e033b91-4e7c-42e8-8e4a-e0b0a16879e4"
