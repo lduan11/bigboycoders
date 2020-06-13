@@ -22,6 +22,7 @@ function Header() {
           <a href="#chat" className="scroll-button">Try me!</a>
         </div>
       </div>
+
     </React.Fragment>
   );
 }
@@ -37,6 +38,64 @@ function About() {
 }
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+
+
+
+const MyMapComponent = compose(
+    withProps({
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCj37HR3ebC1UHS50m3LqM1dTPQ5kzcHeU&v=3.exp&libraries=geometry,drawing,places",
+        loadingElement: <div style={{ height: `100%` }} />,
+        containerElement: <div style={{ height: `400px` }} />,
+        mapElement: <div style={{ height: `100%` }} />,
+    }),
+    withScriptjs,
+    withGoogleMap,
+    withState('places', 'updatePlaces', ''),
+    withHandlers(() => {
+        const refs = {
+            map: undefined,
+        }
+
+        return {
+            onMapMounted: () => ref => {
+                refs.map = ref
+            },
+            fetchPlaces: ({ updatePlaces }) => {
+                let places;
+                const bounds = refs.map.getBounds();
+                const service = new google.maps.places.PlacesService(refs.map.context.__SECRET_MAP_DO_NOT_USE_OR_YOU_WILL_BE_FIRED);
+                const request = {
+                    bounds: bounds,
+                    query : 'covid testing'
+                };
+                service.nearbySearch(request, (results, status) => {
+                    if (status == google.maps.places.PlacesServiceStatus.OK) {
+                        console.log(results);
+                        updatePlaces(results);
+                    }
+                })
+            }
+        }
+    }),
+)((props) => {
+    return (
+        <GoogleMap
+            onTilesLoaded={props.fetchPlaces}
+            ref={props.onMapMounted}
+            onBoundsChanged={props.fetchPlaces}
+            defaultZoom={8}
+            defaultCenter={{ lat: 51.508530, lng: -0.076132 }}
+        >
+            {props.places && props.places.map((place, i) =>
+                <Marker key={i} position={{ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() }} />
+            )}
+        </GoogleMap>
+    )
+})
+
+
+
 
 function Map() {
   Radar.initialize("prj_live_pk_21349df7f94d8750e0d0c588abde594ed166c46d");
@@ -95,7 +154,7 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>
-
+    <MyMapComponent />
   </React.StrictMode>,
   document.getElementById("root")
 );

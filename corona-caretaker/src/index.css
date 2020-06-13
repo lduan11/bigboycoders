@@ -14,6 +14,15 @@ body {
   background-color: #E9F8FA;
 }
 
+#map {
+        height: 100%;
+      }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 h1 {
   font-family: "nunitoextrabold", "Helvetica", sans-serif;
   font-size: 70px;
