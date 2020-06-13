@@ -5,6 +5,7 @@ import "./dialogflow.js";
 import * as serviceWorker from "./serviceWorker";
 import go from "./resources/images/go.png";
 import GoogleMapReact from 'google-map-react';
+import Radar from 'radar-sdk-js';
 
 
 function Header() {
@@ -34,8 +35,11 @@ function DialogFlowIntegration() {
     </React.Fragment>
   );
 }
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
 function Map() {
+    Radar.initialize("prj_live_pk_21349df7f94d8750e0d0c588abde594ed166c46d");
   let defaultProps = {
     center: {
       lat: 59.95,
@@ -43,11 +47,33 @@ function Map() {
     },
     zoom: 11
   };
+  Radar.trackOnce(function(err, result) {
+  if (!err) {
+    defaultProps.center.lat = result.coords.latitude;
+    defaultProps.center.lng = result.coords.longitude;
+    return (
+        <React.Fragment>s
+      <div style={{ height: '50vh', width: '50%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyCYVBKK_e3qDxr5RJBALvR9B68AGjOsMYE" }}
+          defaultCenter={defaultProps.center}
+          defaultZoom={defaultProps.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
+      </React.Fragment>
+    );
+  }
+});
 
     return (
-        <React.Fragment>
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+        <React.Fragment>s
+      <div style={{ height: '50vh', width: '50%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyCYVBKK_e3qDxr5RJBALvR9B68AGjOsMYE" }}
           defaultCenter={defaultProps.center}
@@ -64,8 +90,6 @@ function Map() {
     );
 
 }
-
-
 
 ReactDOM.render(
   <React.StrictMode>

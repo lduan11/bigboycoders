@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "dialogflow": "^1.2.0",
     "google-map-react": "^1.1.7",
+    "radar-sdk-js": "^3.0.0-beta.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
