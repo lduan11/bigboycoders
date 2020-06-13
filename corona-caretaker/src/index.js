@@ -4,6 +4,8 @@ import "./index.css";
 import "./dialogflow.js";
 import * as serviceWorker from "./serviceWorker";
 import go from "./resources/images/go.png";
+import GoogleMapReact from 'google-map-react';
+
 
 function Header() {
   return (
@@ -21,20 +23,56 @@ function BotButton() {
 function DialogFlowIntegration() {
   return (
     <React.Fragment>
-      <df-messenger class="messenger-box"
+      <div class = "container">
+      <df-messenger expand = "True" class="messenger-box"
         intent="WELCOME"
-        chat-title="MLH-Hackathon2"
+        chat-title="Corona Caretaker"
         agent-id="6e033b91-4e7c-42e8-8e4a-e0b0a16879e4"
         language-code="en"
       ></df-messenger>
+      </div>
     </React.Fragment>
   );
 }
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+function Map() {
+  let defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
+
+    return (
+        <React.Fragment>
+      // Important! Always set the container height explicitly
+      <div style={{ height: '100vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyCYVBKK_e3qDxr5RJBALvR9B68AGjOsMYE" }}
+          defaultCenter={defaultProps.center}
+          defaultZoom={defaultProps.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
+      </React.Fragment>
+    );
+
+}
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <BotButton />
     <DialogFlowIntegration />
+    <Map />
   </React.StrictMode>,
   document.getElementById("root")
 );
