@@ -18,23 +18,23 @@ function BotButton() {
   return <button className="scroll-button"></button>;
 }
 
-function DialogFlowIntegration(){
-    return ( <React.Fragment>
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-        <df-messenger
-          intent="WELCOME"
-          chat-title="MLH-Hackathon2"
-          agent-id="6e033b91-4e7c-42e8-8e4a-e0b0a16879e4"
-          language-code="en"
-        ></df-messenger>
-        </React.Fragment>
-    );
+function DialogFlowIntegration() {
+  return (
+    <React.Fragment>
+      <df-messenger
+        intent="WELCOME"
+        chat-title="MLH-Hackathon2"
+        agent-id="6e033b91-4e7c-42e8-8e4a-e0b0a16879e4"
+        language-code="en"
+      ></df-messenger>
+    </React.Fragment>
+  );
 }
 ReactDOM.render(
   <React.StrictMode>
-    <DialogFlowIntegration />
     <Header />
     <BotButton />
+    <DialogFlowIntegration />
   </React.StrictMode>,
   document.getElementById("root")
 );
