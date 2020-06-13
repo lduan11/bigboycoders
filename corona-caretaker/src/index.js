@@ -8,7 +8,9 @@ import Radar from "radar-sdk-js";
 import { Provider } from "react-redux";
 import { store } from "./chat";
 import App from "./App";
-
+import { compose, withProps, withHandlers, withState } from "recompose";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+/*global google*/
 function Header() {
   return (
     <React.Fragment>
