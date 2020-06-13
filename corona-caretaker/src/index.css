@@ -17,6 +17,11 @@ h1 {
   line-height: 0.5;
 }
 
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
 h2 {
   font-family: "nunitobold";
   font-size: 60px;
@@ -27,11 +32,10 @@ h2 {
 }
 
 .header-container {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: auto;
-  display: relative;
-  transform: translateY(35%);
 }
 
 .about-container {
@@ -61,6 +65,7 @@ h2 {
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 100;
 }
 
 .container {

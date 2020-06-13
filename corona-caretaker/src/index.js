@@ -21,8 +21,10 @@ function Header() {
   return (
     <React.Fragment>
       <div className="header-container">
-        <h1>Hi, my name is</h1>
-        <h1>Corona Caretaker!</h1>
+        <div className="inner-header-container">
+          <h1>Hi, my name is</h1>
+          <h1>Corona Caretaker!</h1>
+        </div>
       </div>
     </React.Fragment>
   );
@@ -55,7 +57,6 @@ function Map() {
       defaultProps.center.lng = result.coords.longitude;
       return (
         <React.Fragment>
-          s
           <div style={{ height: "50vh", width: "50%" }}>
             <GoogleMapReact
               bootstrapURLKeys={{
@@ -64,11 +65,6 @@ function Map() {
               defaultCenter={defaultProps.center}
               defaultZoom={defaultProps.zoom}
             >
-              {databaseRequest.map(entry =>
-                messageCounter++ % 2 === 0 ? (
-                  <li style={{ color: "rgb(0, 171, 279)" }}>{entry.text}</li>
-                ) : null
-              )}
               <AnyReactComponent
                 lat={59.955413}
                 lng={30.337844}
@@ -100,7 +96,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <BotButton />
-    <About />
     <Provider store={store}>
       <App />
     </Provider>
