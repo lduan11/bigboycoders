@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     const { feed, sendMessage } = this.props;
     return (
-      <div>
+      <div className="chat-container">
         <ul>
           {feed.map(entry => (
             <li>{entry.text}</li>

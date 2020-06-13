@@ -71,6 +71,13 @@ df-messenger {
   --df-messenger-user-message: #479b3d;
 }
 
+.chat-container {
+  width: 75%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .container {
   height: 50%;
 }
