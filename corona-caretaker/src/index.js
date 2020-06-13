@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "milligram";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import GoogleMapReact from "google-map-react";
@@ -7,15 +8,6 @@ import Radar from "radar-sdk-js";
 import { Provider } from "react-redux";
 import { store } from "./chat";
 import App from "./App";
-import "milligram";
-
-function BotButton() {
-  return (
-    <div className="scroll-button">
-      <button className="scroll-button"></button>
-    </div>
-  );
-}
 
 function Header() {
   return (
@@ -25,6 +17,10 @@ function Header() {
           <h1>Hi, my name is</h1>
           <h1>Corona Caretaker!</h1>
         </div>
+        <div className="button-container">
+          <a href="#about" className="scroll-button" >About</a>
+          <a href="#chat" className="scroll-button">Try me!</a>
+        </div>
       </div>
     </React.Fragment>
   );
@@ -33,7 +29,7 @@ function Header() {
 function About() {
   return (
     <React.Fragment>
-      <div className="about-container">
+      <div className="about-container" id="about">
         <h2>About</h2>
       </div>
     </React.Fragment>
@@ -95,11 +91,11 @@ function Map() {
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <BotButton />
+    <About />
     <Provider store={store}>
       <App />
     </Provider>
-    <Map />
+
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -8,13 +8,15 @@ class App extends Component {
   render() {
     const { feed, sendMessage } = this.props;
     return (
-      <div className="chat-container">
+      <div className="chat-container" id="chat">
+        <h2>Hello!</h2>
+        <br></br>
         <ul>
           {feed.map(entry =>
             messageCounter++ % 2 === 0 ? (
-              <li style={{ color: "rgb(0, 171, 279)" }}>{entry.text}</li>
+              <li style={{ color: "rgb(0, 171, 279)", fontSize:"20px" }}>{entry.text}</li>
             ) : (
-              <li style={{ color: "black" }}>{entry.text}</li>
+              <li style={{ color: "black", fontSize:"20px" }}>{entry.text}</li>
             )
           )}
         </ul>
@@ -22,7 +24,7 @@ class App extends Component {
           type="text"
           // keyCode 13 is 'Enter Key'
           onKeyDown={e =>
-            e.keyCode === 13 ? sendMessage(e.target.value) : null
+            e.keyCode === 13 && e.target.value != "" ? sendMessage(e.target.value) : null
           }
           onKeyUp={e => (e.keyCode === 13 ? (e.target.value = "") : null)}
         />

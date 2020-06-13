@@ -1,5 +1,9 @@
 @import "resources/fonts/fonts.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,14 +11,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E9F8FA;
 }
 
 h1 {
   font-family: "nunitoextrabold", "Helvetica", sans-serif;
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
   color: rgb(0, 171, 279);
-  line-height: 0.5;
+  line-height: 0.8;
 }
 
 #map {
@@ -24,15 +29,15 @@ h1 {
 
 h2 {
   font-family: "nunitobold";
-  font-size: 60px;
-  text-align: left;
-  padding-left: 20px;
+  font-size: 50px;
+  text-align: center;
   color: rgb(0, 171, 279);
   line-height: 0.5;
 }
 
 .header-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -42,22 +47,39 @@ h2 {
   width: 100%;
   height: 100vh;
   margin: auto;
+  padding-top: 30px;
 }
 
-.scroll-button {
-  left: 0;
-  right: 0;
+.button-container {
+  /* display: inline-flex;
+  justify-content: center;
   border: none;
   padding: 20px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  border-radius: 50px;
+  font-size: 20px;
   width: 30px;
-  margin: auto;
-  position: fixed;
-  bottom: 20px;
-  z-index: 10;
+  margin: auto; */
+}
+
+.scroll-button {
+    font-family: "nunitoregular";
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a:focus {
+  color: rgb(106, 106, 106) !important;
+}
+a:hover {
+  color: rgb(106, 106, 106) !important;
+}
+a:active {
+  color: rgb(106, 106, 106) !important;
+}
+a:visited {
+    color: rgb(106, 106, 106) !important;
 }
 
 .chat-container {
@@ -66,23 +88,15 @@ h2 {
   right: 0;
   margin: auto;
   z-index: 100;
+  height: 100vh;
+  padding-top: 30px;
 }
 
 .container {
   height: 50%;
 }
 
-.form-line-active input:focus,
-.form-line-active textarea:focus {
-  border: 1px solid green !important;
-  box-shadow: 0 0 3px green !important;
-  -moz-box-shadow: 0 0 3px green !important;
-  -webkit-box-shadow: 0 0 3px green !important;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline-offset: 0px !important;
-  outline: none !important;
+input:focus {
+    border:0px;
+    box-shadow: 0px 0px 5px #719ECE;
 }
