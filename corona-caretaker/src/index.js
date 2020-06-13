@@ -8,7 +8,11 @@ import GoogleMapReact from "google-map-react";
 import Radar from "radar-sdk-js";
 
 function BotButton() {
-  return <button className="scroll-button"></button>;
+  return (
+    <div className="scroll-button">
+      <button className="scroll-button"></button>
+    </div>
+  );
 }
 
 function Header() {
@@ -17,6 +21,16 @@ function Header() {
       <div className="header-container">
         <h1>Hi, my name is</h1>
         <h1>Corona Caretaker!</h1>
+      </div>
+    </React.Fragment>
+  );
+}
+
+function About() {
+  return (
+    <React.Fragment>
+      <div className="about-container">
+        <h2>About</h2>
       </div>
     </React.Fragment>
   );
@@ -97,6 +111,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <BotButton />
+    <About />
     <DialogFlowIntegration />
     <Map />
   </React.StrictMode>,
