@@ -8,6 +8,7 @@ export const sendMessage = (text, sender = "user") => ({
   type: ON_MESSAGE,
   payload: { text, sender }
 });
+
 const messageMiddleware = () => next => action => {
   next(action);
   if (action.type === ON_MESSAGE) {
@@ -20,7 +21,14 @@ const messageMiddleware = () => next => action => {
     }
   }
 };
-const initState = [{ text: "hey" }];
+
+const initState = [
+  {
+    text:
+      "Hi! I am Corona Caretaker, your personal resource on COVID-19. I am here to help you be more informed in this world of confusion, misinformation, and false hoaxes. Ask me a question!"
+  }
+];
+
 const messageReducer = (state = initState, action) => {
   switch (action.type) {
     case ON_MESSAGE:
@@ -29,6 +37,7 @@ const messageReducer = (state = initState, action) => {
       return state;
   }
 };
+
 export const store = createStore(
   messageReducer,
   applyMiddleware(messageMiddleware)

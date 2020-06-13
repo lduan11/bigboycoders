@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./dialogflow.js";
 import * as serviceWorker from "./serviceWorker";
-import go from "./resources/images/go.png";
 import GoogleMapReact from "google-map-react";
 import Radar from "radar-sdk-js";
 import { Provider } from "react-redux";
 import { store } from "./chat";
 import App from "./App";
+import "milligram";
 
 function BotButton() {
   return (
@@ -34,23 +33,6 @@ function About() {
     <React.Fragment>
       <div className="about-container">
         <h2>About</h2>
-      </div>
-    </React.Fragment>
-  );
-}
-
-function DialogFlowIntegration() {
-  return (
-    <React.Fragment>
-      <div className="container">
-        <df-messenger
-          expand="True"
-          class="messenger-box"
-          intent="WELCOME"
-          chat-title="Corona Caretaker"
-          agent-id="6e033b91-4e7c-42e8-8e4a-e0b0a16879e4"
-          language-code="en"
-        ></df-messenger>
       </div>
     </React.Fragment>
   );
@@ -82,6 +64,11 @@ function Map() {
               defaultCenter={defaultProps.center}
               defaultZoom={defaultProps.zoom}
             >
+              {databaseRequest.map(entry =>
+                messageCounter++ % 2 === 0 ? (
+                  <li style={{ color: "rgb(0, 171, 279)" }}>{entry.text}</li>
+                ) : null
+              )}
               <AnyReactComponent
                 lat={59.955413}
                 lng={30.337844}

@@ -9,11 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 h1 {
   font-family: "nunitoextrabold", "Helvetica", sans-serif;
   font-size: 80px;
@@ -61,16 +56,6 @@ h2 {
   z-index: 10;
 }
 
-df-messenger {
-  --df-messenger-minimized-chat-close-icon-color: ;
-  --df-messenger-bot-message: #878fac;
-  --df-messenger-button-titlebar-color: #df9b56;
-  --df-messenger-chat-background-color: #fafafa;
-  --df-messenger-font-color: white;
-  --df-messenger-send-icon: #878fac;
-  --df-messenger-user-message: #479b3d;
-}
-
 .chat-container {
   width: 75%;
   left: 0;
@@ -82,7 +67,17 @@ df-messenger {
   height: 50%;
 }
 
-img {
-  color: white;
-  size: 1 px;
+.form-line-active input:focus,
+.form-line-active textarea:focus {
+  border: 1px solid green !important;
+  box-shadow: 0 0 3px green !important;
+  -moz-box-shadow: 0 0 3px green !important;
+  -webkit-box-shadow: 0 0 3px green !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline-offset: 0px !important;
+  outline: none !important;
 }
