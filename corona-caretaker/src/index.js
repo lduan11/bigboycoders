@@ -6,6 +6,10 @@ import * as serviceWorker from "./serviceWorker";
 import go from "./resources/images/go.png";
 import GoogleMapReact from "google-map-react";
 import Radar from "radar-sdk-js";
+import { Provider } from "react-redux";
+import { store } from "./chat";
+import "milligram";
+import App from "./App";
 
 function BotButton() {
   return (
@@ -112,7 +116,9 @@ ReactDOM.render(
     <Header />
     <BotButton />
     <About />
-    <DialogFlowIntegration />
+    <Provider store={store}>
+      <App />
+    </Provider>
     <Map />
   </React.StrictMode>,
   document.getElementById("root")
