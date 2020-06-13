@@ -18,7 +18,7 @@ h1 {
   font-family: "nunitoextrabold", "Helvetica", sans-serif;
   font-size: 70px;
   text-align: center;
-  color: rgb(0, 171, 279);
+  color: #005E8C;
   line-height: 0.8;
 }
 
@@ -31,7 +31,7 @@ h2 {
   font-family: "nunitobold";
   font-size: 50px;
   text-align: center;
-  color: rgb(0, 171, 279);
+  color: #005E8C;
   line-height: 0.5;
 }
 
@@ -79,7 +79,7 @@ a:active {
   color: rgb(106, 106, 106) !important;
 }
 a:visited {
-    color: rgb(106, 106, 106) !important;
+  color: rgb(106, 106, 106) !important;
 }
 
 .chat-container {

@@ -14,9 +14,9 @@ class App extends Component {
         <ul>
           {feed.map(entry =>
             messageCounter++ % 2 === 0 ? (
-              <li style={{ color: "rgb(0, 171, 279)", fontSize:"20px" }}>{entry.text}</li>
+              <li style={{ color: "#005E8C", fontFamily:"nunitoregular", fontSize:"20px" }}>{entry.text}</li>
             ) : (
-              <li style={{ color: "black", fontSize:"20px" }}>{entry.text}</li>
+              <li style={{ color: "black", fontFamily:"nunitoregular", fontSize:"20px" }}>{entry.text}</li>
             )
           )}
         </ul>
