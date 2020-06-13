@@ -1,14 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import "./dialogflow.js";
+import * as serviceWorker from "./serviceWorker";
+
+function Header() {
+  return (
+    <React.Fragment>
+      <h1>Hi, my name is</h1>
+      <h1>Corona Caretaker!</h1>
+    </React.Fragment>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
