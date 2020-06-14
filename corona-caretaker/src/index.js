@@ -36,7 +36,7 @@ function About() {
         <h2>About</h2>
         <div className="content">
             <h4>I am a virtual assistant designed to help users stay informed and educated about COVID-19. My creators made me by using <a href="https://cloud.google.com/dialogflow/docs"><strong>Dialogflow</strong></a>,
-            a natural language processing (NLP) tool powered by <a href="https://cloud.google.com/"><strong>Google Cloud</strong></a>. I was trained on over 20 "intents," so I can hold a conversation, as well as
+            a natural language processing (NLP) tool powered by <a href="https://cloud.google.com/"><strong>Google Cloud</strong></a>. I was trained on over 40 "intents," so I can hold a conversation, as well as
             provide you with a wide range of resources to learn from. Ask me about what COVID-19 is, if it's real or not, and conspiracy theories surrounding the virus. Tell me if you're sick too, I can help you out!</h4>
             <br></br>
             <h4>My creators built this entire application with <a href="https://reactjs.org/"><strong>JavaScript React</strong></a> and <a href="https://redux.js.org/"><strong>Redux</strong></a>,
