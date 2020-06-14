@@ -1,7 +1,7 @@
 @import "resources/fonts/fonts.css";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,12 +11,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #E9F8FA;
+  background-color: #e9f8fa;
 }
 
 #map {
-        height: 100%;
-      }
+  height: 100%;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -27,7 +27,7 @@ h1 {
   font-family: "nunitoextrabold", "Helvetica", sans-serif;
   font-size: 70px;
   text-align: center;
-  color: #005E8C;
+  color: #005e8c;
   line-height: 0.8;
 }
 
@@ -40,7 +40,7 @@ h2 {
   font-family: "nunitobold";
   font-size: 50px;
   text-align: center;
-  color: #005E8C;
+  color: #005e8c;
   line-height: 0.5;
 }
 
@@ -59,23 +59,11 @@ h2 {
   padding-top: 30px;
 }
 
-.button-container {
-  /* display: inline-flex;
-  justify-content: center;
-  border: none;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  width: 30px;
-  margin: auto; */
-}
-
 .scroll-button {
-    font-family: "nunitoregular";
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  font-family: "nunitoregular";
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 a:focus {
@@ -97,7 +85,7 @@ a:visited {
   right: 0;
   margin: auto;
   z-index: 100;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 30px;
 }
 
@@ -106,6 +94,6 @@ a:visited {
 }
 
 input:focus {
-    border:0px;
-    box-shadow: 0px 0px 5px #719ECE;
+  border: 0px;
+  box-shadow: 0px 0px 5px #719ece;
 }
