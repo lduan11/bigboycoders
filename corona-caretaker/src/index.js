@@ -34,6 +34,17 @@ function About() {
     <React.Fragment>
       <div className="about-container" id="about">
         <h2>About</h2>
+        <div className="content">
+            <h4>I am a virtual assistant designed to help users stay informed and educated about COVID-19. My creators made me by using <strong>Dialogflow</strong>, a natural language processing (NLP)
+            tool powered by <strong>Google Cloud</strong>. I was trained on over <strong>20</strong> "intents," so I can hold a conversation, as well as provide you with a wide range of resources to learn from. Ask me about
+            what COVID-19 is, if it's real or not, and conspiracy theories surrounding the virus. Tell me if you're sick too, I can help you out!</h4>
+            <br></br>
+            <h4>My creators built this entire application with <strong>JavaScript React</strong> and <strong>Redux</strong>, and hosted me using <strong>Google Firebase.</strong></h4>
+            <br></br>
+            <h4>There's still some work to be done though! My map function uses the <strong>Google Maps API*</strong> along with <strong>Radar.io</strong> to accurately display the closest COVID-19 testing facilities to you.
+            However, the Google Maps API does not currently support COVID-19 testing facility tracking.</h4>
+
+        </div>
       </div>
     </React.Fragment>
   );

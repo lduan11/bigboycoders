@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-width: 1200px;
 }
 
 body {
@@ -42,6 +43,24 @@ h2 {
   text-align: center;
   color: #005e8c;
   line-height: 0.5;
+}
+
+.content {
+    padding-left: 245px;
+    padding-right: 245px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+h4 {
+    font-family: "nunitoregular";
+    font-size: 28px;
+    text-align: left;
+    word-wrap: normal;
+}
+
+strong {
+    color: #005e8c;
 }
 
 .header-container {
@@ -96,4 +115,24 @@ a:visited {
 input:focus {
   border: 0px;
   box-shadow: 0px 0px 5px #719ece;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.3 !important; /* for older chrome versions. may no longer apply. */
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: black;
+    opacity: 0.3 !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: black;
+    opacity: 0.3 !important;
+}
+
+:-ms-input-placeholder {
+   color: black;
+   opacity: 0.3 !important;
 }

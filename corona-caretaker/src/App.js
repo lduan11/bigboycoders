@@ -21,7 +21,7 @@ class App extends Component {
           )}
         </ul>
         <input
-          type="text"
+          type="text" placeholder="Ask me a question!"
           // keyCode 13 is 'Enter Key'
           onKeyDown={e =>
             e.keyCode === 13 && e.target.value != "" ? sendMessage(e.target.value) : null

@@ -25,7 +25,7 @@ const messageMiddleware = () => next => action => {
 const initState = [
   {
     text:
-      "I am Corona Caretaker, your personal resource on COVID-19. I am here to help you be more informed in this world of confusion, misinformation, and false hoaxes. Ask me a question!"
+      "I am Corona Caretaker, your personal resource on COVID-19. I am here to help you be more informed in this world of confusion, misinformation, and false hoaxes."
   }
 ];
 
