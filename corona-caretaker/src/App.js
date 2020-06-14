@@ -7,13 +7,14 @@ let messageCounter = 0;
 class App extends Component {
   render() {
     const { feed, sendMessage } = this.props;
+    let messageCounter = feed.length;
     return (
       <div className="chat-container" id="chat">
         <h2>Hello!</h2>
         <br></br>
         <ul>
           {feed.map(entry =>
-            messageCounter++ % 2 === 0 ? (
+            messageCounter-- % 2 !== 0 ? (
               <li style={{ color: "#005E8C", fontFamily:"nunitoregular", fontSize:"20px" }}>{entry.text}</li>
             ) : (
               <li style={{ color: "black", fontFamily:"nunitoregular", fontSize:"20px" }}>{entry.text}</li>

@@ -47,9 +47,8 @@ function About() {
             support COVID-19 testing facility tracking.</h4>
         </div>
         <div className="footer">
-            <h5>Source code available on <a href="https://github.com/lduan11/bigboycoders"><strong>GitHub</strong></a></h5>
-            <br></br>
-            <h5>Created by <a href="https://www.linkedin.com/in/bryant-hou/">Bryant Hou</a>, <a href="https://www.linkedin.com/in/george-zhuang-629b00190/">George Zhuang</a>, <a href="https://www.linkedin.com/in/lduan11/">Luke Duan</a></h5>
+            <h5 >Source code available on <a href="https://github.com/lduan11/bigboycoders"><strong>GitHub</strong></a></h5>
+            <h5>Created by <a href="https://www.linkedin.com/in/bryant-hou/"><strong>Bryant Hou</strong></a>, <a href="https://www.linkedin.com/in/george-zhuang-629b00190/"><strong>George Zhuang</strong></a>, <a href="https://www.linkedin.com/in/lduan11/"><strong>Luke Duan</strong></a></h5>
         </div>
       </div>
     </React.Fragment>
