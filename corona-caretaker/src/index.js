@@ -172,7 +172,6 @@ ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>
-    <MyMapComponent />
   </React.StrictMode>,
   document.getElementById("root")
 );
